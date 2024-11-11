@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Alert, Button, Label, Spinner, TextInput } from 'flowbite-react';
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
@@ -88,6 +89,14 @@ const Signup = () => {
                     }
                 </div> 
             </div>
+=======
+import React from 'react';
+
+const Signup = () => {
+    return (
+        <div>
+            
+>>>>>>> ba336c48db448b5b4de521136a22b92e47a3f9fe
         </div>
     );
 }
