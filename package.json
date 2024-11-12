@@ -1,6 +1,5 @@
 {
   "dependencies": {
-<<<<<<< HEAD
     "bcryptjs": "^2.4.3",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
@@ -20,8 +19,4 @@
   "author": "",
   "license": "ISC",
   "description": ""
-=======
-    "react-router-dom": "^6.28.0"
-  }
->>>>>>> ba336c48db448b5b4de521136a22b92e47a3f9fe
 }
