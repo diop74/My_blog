@@ -58,9 +58,10 @@ export const signin = async (req,res,next) =>{
             {id: user._id}, 
             process.env.JWT_SECRET, 
             {expiresIn: "1h"});
+        const {password,...rest} = user._doc;
         res.status(200).cookie('access_token', token, {
             httpOnly: true,
-        }).json({message: "User signed in successfully"});
+        }).json(rest);
     } catch (err) {
         next(err);
     }
@@ -78,7 +79,7 @@ export const google = async (req,res,next) =>{
             const {password,...rest} = user._doc;
             return res.status(200).cookie('access_token', token, {
                 httpOnly: true,
-            }).json({message: "User signed in successfully"});
+            }).json(rest);
         }else{
             const genPassword = Math.random().toString(36).slice(-8) + Math.random().toString(36).slice(-8);
             const hashPassword = bcryptjs.hashSync(genPassword, 10);
