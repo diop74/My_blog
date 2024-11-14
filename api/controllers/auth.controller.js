@@ -35,9 +35,9 @@ export const signin = async (req,res,next) =>{
     const {email, password} = req.body;
 
     if (!email || !password || email === "" || password === "") {
-        next((
+        return next(
             errorHandler(400, "All fields are required")
-        ));
+        );
     }
 
     try {
@@ -58,7 +58,7 @@ export const signin = async (req,res,next) =>{
             {id: user._id}, 
             process.env.JWT_SECRET, 
             {expiresIn: "1h"});
-        const {password,...rest} = user._doc;
+        const {password:userPassword,...rest} = user._doc;
         res.status(200).cookie('access_token', token, {
             httpOnly: true,
         }).json(rest);
