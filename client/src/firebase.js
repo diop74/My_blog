@@ -4,13 +4,15 @@ import { initializeApp } from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: "chitary-blog.firebaseapp.com",
-  projectId: "chitary-blog",
-  storageBucket: "chitary-blog.firebasestorage.app",
-  messagingSenderId: "652028041265",
-  appId: "1:652028041265:web:bc65247408d38b51929d10"
+  authDomain: "exemple-b0a56.firebaseapp.com",
+  projectId: "exemple-b0a56",
+  storageBucket: "exemple-b0a56.appspot.com",
+  messagingSenderId: "486766812042",
+  appId: "1:486766812042:web:acb499f34e9fa0dbe54673",
+  measurementId: "G-ZNXL7YNQ1C"
 };
 
 // Initialize Firebase
