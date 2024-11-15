@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import { FaThumbsUp } from 'react-icons/fa';
 import { useSelector } from 'react-redux';
 import { Button, Textarea } from 'flowbite-react';
-import { set } from 'mongoose';
 
 export default function Comment({ comment, onLike, onEdit, onDelete }) {
   const [user, setUser] = useState({});
@@ -54,8 +53,8 @@ export default function Comment({ comment, onLike, onEdit, onDelete }) {
       <div className='flex-shrink-0 mr-3'>
         <img
           className='w-10 h-10 rounded-full bg-gray-200'
-          src={user.profilePicture}
-          alt={user.username}
+          src={user.profilePicture || '/default-profile.png'}
+          alt={user.username || 'anonymous'}
         />
       </div>
       <div className='flex-1'>
