@@ -48,10 +48,10 @@ const Signin = () => {
             <div className='flex p-3 max-w-3xl mx-auto flex-col md:flex-row md:items-center gap-5'>
                 <div className='flex-1'>
                     <Link to="/" className='font-bold dark:text-white text-4xl'>
-                        <span className='px-2 py-1 bg-gradient-to-r from-indigo-500 via-purpule-500 to-pink-500 rounded-lg text-white'>Chitari's</span>
+                        <span className='px-2 py-1 bg-gradient-to-r from-green-700 via-tail-500 to-lime-300 rounded-lg text-white'>Chitari's</span>
                         Blog
                     </Link>
-                    <p className='text-sm mt-5'>this is a demo signup page. You can signin with your email and password or with Google.</p>
+                    <p className='text-sm mt-5'>Vous pouvez vous connecter avec votre adresse e-mail et votre mot de passe ou avec Google.</p>
                 </div>
                 <div className='flex-1'>
                     <form className='flex flex-col gap-4' onSubmit={handleSubmit}>
@@ -61,10 +61,10 @@ const Signin = () => {
                         </div>
                         <div>
                             <Label value='Your password'></Label>
-                            <TextInput type='password' placeholder='*******************' id='password' onChange={handleChange}></TextInput>
+                            <TextInput type='password' placeholder='**************' id='password' onChange={handleChange}></TextInput>
                         </div>
 
-                        <Button gradientDuoTone='purpleToPink' type='submit' disabled={loading}>
+                        <Button gradientDuoTone="tealToLime"type='submit' disabled={loading}>
                             {loading ? (
                                 <>
                                     <Spinner size='sm' />
