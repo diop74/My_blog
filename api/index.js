@@ -5,7 +5,7 @@ import userRoutes from './routes/user.route.js';
 import authRoutes from './routes/auth.route.js';
 import postRoutes from './routes/post.route.js';
 import commentRoutes from './routes/comment.route.js';
-import cors from 'cors';
+
 
 import cookieParser from 'cookie-parser';
 import path from 'path';
@@ -23,10 +23,7 @@ mongoose.connect(process.env.MONGO).then(
 )
 const __dirname = path.resolve();
 const app = express();
-app.use(cors({
-    origin:'https://mauri-chitary-blog.onrender.com',
-    credentials: true
-}));
+
 
 app.use(express.json());
 
