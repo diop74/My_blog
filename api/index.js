@@ -21,6 +21,8 @@ mongoose.connect(process.env.MONGO).then(
         console.log('Failed to connect to MongoDB', err);
     }
 )
+console.log('Starting backend...');
+console.log('Mongo URI:', process.env.MONGO);
 const __dirname = path.resolve();
 const app = express();
 
