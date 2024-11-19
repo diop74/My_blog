@@ -21,8 +21,7 @@ mongoose.connect(process.env.MONGO).then(
         console.log('Failed to connect to MongoDB', err);
     }
 )
-console.log('Starting backend...');
-console.log('Mongo URI:', process.env.MONGO);
+
 const __dirname = path.resolve();
 const app = express();
 
@@ -30,10 +29,10 @@ const app = express();
 app.use(express.json());
 
 app.use(cookieParser());
-const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+
+app.listen(3000, () => {
+    console.log(`Server is running on port 3000`);
 });
 
 app.use('/api/user', userRoutes);
